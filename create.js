@@ -22,6 +22,8 @@ const csvKeys = [
     ['to_identifiers',   link => link.toEntity.identifiers],
     ['from_title',       link => link.fromEntity.name],
     ['to_title',         link => link.toEntity.name],
+    ['created',          link => link.resource_created],
+    ['modified',         link => link.resource_modified],
     ['relation',         link => link.entityRelations],
 ]
 
