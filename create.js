@@ -11,7 +11,8 @@ function usage() {
 }
 
 function _quote(s) {
-    if (Array.isArray(s)) s = s.join(INNERSEP);
+    if (Array.isArray(s)) s = s.join(INNERSEP)
+    else if (typeof s === 'number') return s
     return '"' + s.replace('"', '\"') + '"'
 }
 
@@ -25,6 +26,7 @@ const csvKeys = [
     ['created',          link => link.resource_created],
     ['modified',         link => link.resource_modified],
     ['relation',         link => link.entityRelations],
+    ['confidence',       link => link.confidence],
 ]
 
 
