@@ -11,4 +11,4 @@
 
 clean: json.clean csv.clean
 
-all: publication.csv
+all: publication.csv dataset.csv
